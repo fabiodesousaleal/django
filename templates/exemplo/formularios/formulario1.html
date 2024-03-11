@@ -1,0 +1,10 @@
+{% extends "exemplo/base.html" %}
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}  <!-- Renderiza os campos do formulário -->
+    <button type="submit">Enviar</button>
+</form>
+
+{% endblock%}
